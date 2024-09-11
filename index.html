@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <form class="contact-form" action="#" method="get" id="contactForm">
+      <h1>We would like to help you</h1>
+      <div class="form-group">
+        <input
+          class="input"
+          placeholder="Name"
+          name="name"
+          required
+          type="text"
+          maxlength="36"
+          id="name"
+        />
+        <div class="error-message" id="name-error"></div>
+      </div>
+
+      <div class="form-group">
+        <textarea
+          class="input"
+          placeholder="Message"
+          name="message"
+          required
+          maxlength="400"
+          id="message"
+        ></textarea>
+        <div class="error-message" id="message-error"></div>
+      </div>
+
+      <h3 class="caps">How to answer you?</h3>
+      <div class="form-group">
+        <input
+          class="input"
+          name="phone"
+          required
+          placeholder="Phone format: +380123456789"
+          type="tel"
+          id="phone"
+          pattern="\+380[0-9]{9}"
+        />
+        <div class="error-message" id="phone-error"></div>
+      </div>
+
+      <div class="form-group">
+        <input
+          class="input"
+          name="email"
+          required
+          placeholder="Email"
+          maxlength="60"
+          type="email"
+          id="email"
+        />
+        <div class="error-message" id="email-error"></div>
+      </div>
+
+      <div class="flex-center">
+        <button
+          id="btn"
+          class="primary"
+          type="submit"
+          aria-label="Send request"
+        >
+          Send message
+        </button>
+      </div>
+      <div class="result"></div>
+    </form>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
